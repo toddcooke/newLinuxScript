@@ -1,3 +1,3 @@
-# newLinuxScript
+# newMachineSetup
 
-Stuff to install/configure after a fresh linux install
+Stuff to install/configure after a fresh machine install
