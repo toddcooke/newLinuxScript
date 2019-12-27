@@ -6,19 +6,25 @@ function install() {
 
 echo installing things for ubuntu
 
+# for steam
+sudo add-apt-repository multiverse
+sudo dpkg --add-architecture i386
+
 sudo apt-get update
 
 install curl
+install steam
 install firefox
 install git
+install default-jre
+install zsh
+
 sudo apt-get -y remove docker docker-engine docker.io
 install docker.io
-sudo systemctl start docker
-sudo systemctl enable docker
-install default-jre
-install steam-installer
-install zsh
-sudo snap install discord
+if [[ $$ -ne 1 ]]; then
+  sudo systemctl start docker
+  sudo systemctl enable docker
+fi
 
 # https://github.com/nodesource/distributions/blob/master/README.md#deb
 node --version || {
