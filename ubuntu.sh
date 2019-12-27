@@ -11,7 +11,10 @@ sudo apt-get update
 install curl
 install firefox
 install git
+sudo apt-get -y remove docker docker-engine docker.io
 install docker.io
+sudo systemctl start docker
+sudo systemctl enable docker
 install default-jre
 install steam-installer
 install zsh
